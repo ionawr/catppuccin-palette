@@ -34,7 +34,7 @@ Deno.test("ansiEntries", () => {
       );
 
       if (ansiColorName == "black") {
-        if (flavorName == "latte") {
+        if (flavorName == "light") {
           assertEquals(
             ansiColor.normal.hex,
             palette[flavorName].colors.subtext1.hex,
@@ -56,7 +56,7 @@ Deno.test("ansiEntries", () => {
       }
 
       if (ansiColorName == "white") {
-        if (flavorName == "latte") {
+        if (flavorName == "light") {
           assertEquals(
             ansiColor.normal.hex,
             palette[flavorName].colors.surface2.hex,

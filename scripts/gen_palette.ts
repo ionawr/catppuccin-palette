@@ -22,9 +22,9 @@ const entriesFromObject = <T extends object>(obj: T): Entries<T> =>
 type Writeable<T> = { -readonly [P in keyof T]: T[P] };
 
 const definitions = {
-  latte: {
-    name: "Latte",
-    emoji: "🌻",
+  light: {
+    name: "Light",
+    emoji: "☀️",
     dark: false,
     colors: {
       rosewater: {
@@ -97,345 +97,76 @@ const definitions = {
         object: new Color("#7287fd"),
         accent: true,
       },
-      text: {
-        name: "Text",
-        object: new Color("#4c4f69"),
-        accent: false,
-      },
-      subtext1: {
-        name: "Subtext 1",
-        object: new Color("#5c5f77"),
-        accent: false,
-      },
-      subtext0: {
-        name: "Subtext 0",
-        object: new Color("#6c6f85"),
-        accent: false,
-      },
-      overlay2: {
-        name: "Overlay 2",
-        object: new Color("#7c7f93"),
-        accent: false,
-      },
-      overlay1: {
-        name: "Overlay 1",
-        object: new Color("#8c8fa1"),
-        accent: false,
-      },
-      overlay0: {
-        name: "Overlay 0",
-        object: new Color("#9ca0b0"),
-        accent: false,
-      },
-      surface2: {
-        name: "Surface 2",
-        object: new Color("#acb0be"),
-        accent: false,
-      },
-      surface1: {
-        name: "Surface 1",
-        object: new Color("#bcc0cc"),
-        accent: false,
-      },
-      surface0: {
-        name: "Surface 0",
-        object: new Color("#ccd0da"),
-        accent: false,
-      },
-      base: {
-        name: "Base",
-        object: new Color("#eff1f5"),
-        accent: false,
-      },
-      mantle: {
-        name: "Mantle",
-        object: new Color("#e6e9ef"),
-        accent: false,
-      },
-      crust: {
-        name: "Crust",
-        object: new Color("#dce0e8"),
-        accent: false,
-      },
-    },
-  },
-  frappe: {
-    name: "Frappé",
-    emoji: "🪴",
-    dark: true,
-    colors: {
-      rosewater: {
-        name: "Rosewater",
-        object: new Color("#f2d5cf"),
-        accent: true,
-      },
-      flamingo: {
-        name: "Flamingo",
-        object: new Color("#eebebe"),
-        accent: true,
-      },
-      pink: {
-        name: "Pink",
-        object: new Color("#f4b8e4"),
-        accent: true,
-      },
-      mauve: {
-        name: "Mauve",
-        object: new Color("#ca9ee6"),
-        accent: true,
-      },
-      red: {
-        name: "Red",
-        object: new Color("#e78284"),
-        accent: true,
-      },
-      maroon: {
-        name: "Maroon",
-        object: new Color("#ea999c"),
-        accent: true,
-      },
-      peach: {
-        name: "Peach",
-        object: new Color("#ef9f76"),
-        accent: true,
-      },
-      yellow: {
-        name: "Yellow",
-        object: new Color("#e5c890"),
-        accent: true,
-      },
-      green: {
-        name: "Green",
-        object: new Color("#a6d189"),
-        accent: true,
-      },
-      teal: {
-        name: "Teal",
-        object: new Color("#81c8be"),
-        accent: true,
-      },
-      sky: {
-        name: "Sky",
-        object: new Color("#99d1db"),
-        accent: true,
-      },
-      sapphire: {
-        name: "Sapphire",
-        object: new Color("#85c1dc"),
-        accent: true,
-      },
-      blue: {
-        name: "Blue",
-        object: new Color("#8caaee"),
-        accent: true,
-      },
-      lavender: {
-        name: "Lavender",
-        object: new Color("#babbf1"),
+      monochrome: {
+        name: "Monochrome",
+        object: new Color("#0b0b0b"),
         accent: true,
       },
       text: {
         name: "Text",
-        object: new Color("#c6d0f5"),
+        object: new Color("#0b0b0b"),
         accent: false,
       },
       subtext1: {
         name: "Subtext 1",
-        object: new Color("#b5bfe2"),
+        object: new Color("#161616"),
         accent: false,
       },
       subtext0: {
         name: "Subtext 0",
-        object: new Color("#a5adce"),
+        object: new Color("#262626"),
         accent: false,
       },
       overlay2: {
         name: "Overlay 2",
-        object: new Color("#949cbb"),
+        object: new Color("#393939"),
         accent: false,
       },
       overlay1: {
         name: "Overlay 1",
-        object: new Color("#838ba7"),
+        object: new Color("#525252"),
         accent: false,
       },
       overlay0: {
         name: "Overlay 0",
-        object: new Color("#737994"),
+        object: new Color("#6f6f6f"),
         accent: false,
       },
       surface2: {
         name: "Surface 2",
-        object: new Color("#626880"),
+        object: new Color("#8d8d8d"),
         accent: false,
       },
       surface1: {
         name: "Surface 1",
-        object: new Color("#51576d"),
+        object: new Color("#a8a8a8"),
         accent: false,
       },
       surface0: {
         name: "Surface 0",
-        object: new Color("#414559"),
+        object: new Color("#c6c6c6"),
         accent: false,
       },
       base: {
         name: "Base",
-        object: new Color("#303446"),
+        object: new Color("#e8e8e8"),
         accent: false,
       },
       mantle: {
         name: "Mantle",
-        object: new Color("#292c3c"),
+        object: new Color("#e0e0e0"),
         accent: false,
       },
       crust: {
         name: "Crust",
-        object: new Color("#232634"),
+        object: new Color("#d8d8d8"),
         accent: false,
       },
     },
   },
-  macchiato: {
-    name: "Macchiato",
-    emoji: "🌺",
-    dark: true,
-    colors: {
-      rosewater: {
-        name: "Rosewater",
-        object: new Color("#f4dbd6"),
-        accent: true,
-      },
-      flamingo: {
-        name: "Flamingo",
-        object: new Color("#f0c6c6"),
-        accent: true,
-      },
-      pink: {
-        name: "Pink",
-        object: new Color("#f5bde6"),
-        accent: true,
-      },
-      mauve: {
-        name: "Mauve",
-        object: new Color("#c6a0f6"),
-        accent: true,
-      },
-      red: {
-        name: "Red",
-        object: new Color("#ed8796"),
-        accent: true,
-      },
-      maroon: {
-        name: "Maroon",
-        object: new Color("#ee99a0"),
-        accent: true,
-      },
-      peach: {
-        name: "Peach",
-        object: new Color("#f5a97f"),
-        accent: true,
-      },
-      yellow: {
-        name: "Yellow",
-        object: new Color("#eed49f"),
-        accent: true,
-      },
-      green: {
-        name: "Green",
-        object: new Color("#a6da95"),
-        accent: true,
-      },
-      teal: {
-        name: "Teal",
-        object: new Color("#8bd5ca"),
-        accent: true,
-      },
-      sky: {
-        name: "Sky",
-        object: new Color("#91d7e3"),
-        accent: true,
-      },
-      sapphire: {
-        name: "Sapphire",
-        object: new Color("#7dc4e4"),
-        accent: true,
-      },
-      blue: {
-        name: "Blue",
-        object: new Color("#8aadf4"),
-        accent: true,
-      },
-      lavender: {
-        name: "Lavender",
-        object: new Color("#b7bdf8"),
-        accent: true,
-      },
-      text: {
-        name: "Text",
-        object: new Color("#cad3f5"),
-        accent: false,
-      },
-      subtext1: {
-        name: "Subtext 1",
-        object: new Color("#b8c0e0"),
-        accent: false,
-      },
-      subtext0: {
-        name: "Subtext 0",
-        object: new Color("#a5adcb"),
-        accent: false,
-      },
-      overlay2: {
-        name: "Overlay 2",
-        object: new Color("#939ab7"),
-        accent: false,
-      },
-      overlay1: {
-        name: "Overlay 1",
-        object: new Color("#8087a2"),
-        accent: false,
-      },
-      overlay0: {
-        name: "Overlay 0",
-        object: new Color("#6e738d"),
-        accent: false,
-      },
-      surface2: {
-        name: "Surface 2",
-        object: new Color("#5b6078"),
-        accent: false,
-      },
-      surface1: {
-        name: "Surface 1",
-        object: new Color("#494d64"),
-        accent: false,
-      },
-      surface0: {
-        name: "Surface 0",
-        object: new Color("#363a4f"),
-        accent: false,
-      },
-      base: {
-        name: "Base",
-        object: new Color("#24273a"),
-        accent: false,
-      },
-      mantle: {
-        name: "Mantle",
-        object: new Color("#1e2030"),
-        accent: false,
-      },
-      crust: {
-        name: "Crust",
-        object: new Color("#181926"),
-        accent: false,
-      },
-    },
-  },
-  mocha: {
-    name: "Mocha",
-    emoji: "🌿",
+  dark: {
+    name: "Dark",
+    emoji: "🌙",
     dark: true,
     colors: {
       rosewater: {
@@ -508,64 +239,69 @@ const definitions = {
         object: new Color("#b4befe"),
         accent: true,
       },
+      monochrome: {
+        name: "Monochrome",
+        object: new Color("#f4f4f4"),
+        accent: true,
+      },
       text: {
         name: "Text",
-        object: new Color("#cdd6f4"),
+        object: new Color("#f4f4f4"),
         accent: false,
       },
       subtext1: {
         name: "Subtext 1",
-        object: new Color("#bac2de"),
+        object: new Color("#e0e0e0"),
         accent: false,
       },
       subtext0: {
         name: "Subtext 0",
-        object: new Color("#a6adc8"),
+        object: new Color("#c6c6c6"),
         accent: false,
       },
       overlay2: {
         name: "Overlay 2",
-        object: new Color("#9399b2"),
+        object: new Color("#a8a8a8"),
         accent: false,
       },
       overlay1: {
         name: "Overlay 1",
-        object: new Color("#7f849c"),
+        object: new Color("#8d8d8d"),
         accent: false,
       },
       overlay0: {
         name: "Overlay 0",
-        object: new Color("#6c7086"),
+        object: new Color("#6f6f6f"),
         accent: false,
       },
       surface2: {
         name: "Surface 2",
-        object: new Color("#585b70"),
+        object: new Color("#525252"),
         accent: false,
       },
       surface1: {
         name: "Surface 1",
-        object: new Color("#45475a"),
+        object: new Color("#393939"),
         accent: false,
       },
       surface0: {
         name: "Surface 0",
-        object: new Color("#313244"),
+        object: new Color("#262626"),
         accent: false,
       },
       base: {
         name: "Base",
-        object: new Color("#1e1e2e"),
+        object: new Color("#161616"),
         accent: false,
       },
       mantle: {
         name: "Mantle",
-        object: new Color("#181825"),
+        object: new Color("#0b0b0b"),
         accent: false,
       },
       crust: {
         name: "Crust",
-        object: new Color("#11111b"),
+        object: new Color("#000000"),
         accent: false,
       },
     },
