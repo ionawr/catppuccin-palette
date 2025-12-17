@@ -24,7 +24,7 @@ type Writeable<T> = { -readonly [P in keyof T]: T[P] };
 const definitions = {
   light: {
     name: "Light",
-    emoji: "☀️",
+    emoji: "🌅",
     dark: false,
     colors: {
       rosewater: {
@@ -166,7 +166,7 @@ const definitions = {
   },
   dark: {
     name: "Dark",
-    emoji: "🌙",
+    emoji: "🌌",
     dark: true,
     colors: {
       rosewater: {
