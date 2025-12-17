@@ -384,7 +384,11 @@ const ansiMappings = {
 };
 
 const toHex = (color: Color): string => {
-  return color.toString({ format: "hex" });
+  const hex = color.toString({ format: "hex" });
+  if (hex.length === 4) {
+    return `#${hex[1]}${hex[1]}${hex[2]}${hex[2]}${hex[3]}${hex[3]}`;
+  }
+  return hex;
 };
 
 const toRgb = (color: Color): { r: number; g: number; b: number } => {
