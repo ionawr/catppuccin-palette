@@ -49,9 +49,32 @@
             outputHash = "sha256-ObSSLWjdXFn81T6f2iYGk1ONIkQTN2o2yb+eHl/so7g=";
           };
 
-          json = pkgs.runCommand "catppuccin-palette-json" {} ''
-            cp ${inputs.self}/palette.json $out
-          '';
+          json = pkgs.stdenv.mkDerivation {
+            pname = "catppuccin-palette";
+            version = "1.7.1";
+            src = inputs.self;
+
+            nativeBuildInputs = with pkgs; [
+              deno
+              nodejs
+              cacert
+            ];
+
+            buildPhase = ''
+              export HOME=$TMPDIR
+              export DENO_DIR=$TMPDIR/deno
+              export SSL_CERT_FILE=${pkgs.cacert}/etc/ssl/certs/ca-bundle.crt
+              export NODE_EXTRA_CA_CERTS=${pkgs.cacert}/etc/ssl/certs/ca-bundle.crt
+              deno task generate
+            '';
+
+            installPhase = ''
+              cp palette.json $out
+            '';
+
+            outputHashAlgo = "sha256";
+            outputHash = "sha256-//OsJjEOw+Dc9C6MIwswOoOK8cDMo7eFpDwECD3k34Q=";
+          };
         };
 
         devShells.default = pkgs.mkShell {
