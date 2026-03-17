@@ -26,6 +26,8 @@
             version = "1.7.1";
             src = inputs.self;
 
+            dontFixup = true;
+
             nativeBuildInputs = with pkgs; [
               deno
               nodejs
@@ -57,7 +59,7 @@
 
             outputHashAlgo = "sha256";
             outputHashMode = "recursive";
-            outputHash = "sha256-RtWQuhVpbz2Viq4fw5CINlMLvT3G/tqDf+UnYLdy1/4=";
+            outputHash = "sha256-6xjk1K2eMh/Yjx/RL77Oe3QjfsSjbizg23pOmufZLtk=";
           };
 
           json = pkgs.stdenv.mkDerivation {
