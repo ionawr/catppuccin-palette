@@ -6,7 +6,7 @@
     flake-parts.url = "github:hercules-ci/flake-parts";
   };
 
-  outputs = {self, ...} @ inputs: let
+  outputs = inputs: let
     inherit (inputs.nixpkgs) lib;
     systems = lib.systems.flakeExposed;
   in
@@ -37,16 +37,17 @@
               export DENO_DIR=$TMPDIR/deno
               export SSL_CERT_FILE=${pkgs.cacert}/etc/ssl/certs/ca-bundle.crt
               export NODE_EXTRA_CA_CERTS=${pkgs.cacert}/etc/ssl/certs/ca-bundle.crt
-              deno task build
+              deno task build:npm
             '';
 
             installPhase = ''
+              rm -rf dist/npm/node_modules dist/npm/package-lock.json
               cp -r dist/npm $out
             '';
 
             outputHashAlgo = "sha256";
             outputHashMode = "recursive";
-            outputHash = "sha256-WQ+RkOF+fCphdXBjEIu1tW6S/MoESMyQpSLarVTNP48=";
+            outputHash = "sha256-RtWQuhVpbz2Viq4fw5CINlMLvT3G/tqDf+UnYLdy1/4=";
           };
 
           json = pkgs.stdenv.mkDerivation {
