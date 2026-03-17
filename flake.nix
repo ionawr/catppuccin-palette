@@ -41,8 +41,18 @@
             '';
 
             installPhase = ''
-              rm -rf dist/npm/node_modules dist/npm/package-lock.json
-              cp -r dist/npm $out
+              mkdir -p $out
+              cp dist/npm/package.json $out/
+              cp dist/npm/LICENSE $out/
+              cp dist/npm/README.md $out/
+              cp -r dist/npm/esm $out/
+              cp -r dist/npm/script $out/
+              cp -r dist/npm/css $out/
+              cp -r dist/npm/less $out/
+              cp -r dist/npm/scss $out/
+
+              rm -f $out/esm/_dnt.test_shims.* $out/esm/mod.test.*
+              rm -f $out/script/_dnt.test_shims.* $out/script/mod.test.*
             '';
 
             outputHashAlgo = "sha256";
