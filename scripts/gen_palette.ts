@@ -416,7 +416,7 @@ const toOklch = (color: Color): { l: number; c: number; h: number } => {
   return {
     l,
     c,
-    h: h ?? 0,
+    h: isNaN(h) ? 0 : h,
   };
 };
 
