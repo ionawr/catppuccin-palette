@@ -23,7 +23,7 @@
 
           npm = pkgs.stdenv.mkDerivation {
             pname = "catppuccin-palette";
-            version = "1.7.1";
+            version = "1.8.0";
             src = inputs.self;
 
             dontFixup = true;
@@ -59,12 +59,12 @@
 
             outputHashAlgo = "sha256";
             outputHashMode = "recursive";
-            outputHash = "sha256-6xjk1K2eMh/Yjx/RL77Oe3QjfsSjbizg23pOmufZLtk=";
+            outputHash = "sha256-2NbubeDofil/3mjUYHg9DyeOzMkFZyEP/BWKQuT4bAQ=";
           };
 
           json = pkgs.stdenv.mkDerivation {
             pname = "catppuccin-palette";
-            version = "1.7.1";
+            version = "1.8.0";
             src = inputs.self;
 
             nativeBuildInputs = with pkgs; [
@@ -86,7 +86,7 @@
             '';
 
             outputHashAlgo = "sha256";
-            outputHash = "sha256-ed5w9LqQEpMyzA6Qnnse+bW54Kgj/55BjB95679irv4=";
+            outputHash = "sha256-e8BcLCy8MCmaqM+GvyTIDSfmvFzvsio403xC3prGEAs=";
           };
         };
 
